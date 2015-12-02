@@ -18,10 +18,11 @@ public class Main extends Application {
 	
 	private Stage 	   primaryStage;   // Stage of GUI
 	private BorderPane rootLayout;     // UI Root
-	
+	private InputClass input = new InputClass();
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Chat View");
+		
 		
 		// Load FXML files and display in GUI
 		initRootLayout();
@@ -51,9 +52,9 @@ public class Main extends Application {
 			AnchorPane personView = (AnchorPane) loader.load();
 			// Set PersonView in centre of RootLayout
 			rootLayout.setCenter(personView);
-			System.out.println(loader.getController().toString());
 			ListViewController controller = loader.getController();
 			controller.setMainApp(this);
+			controller.getInput(input);
 		} catch (IOException e){
 			e.printStackTrace();
 		}
