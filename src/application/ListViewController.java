@@ -15,27 +15,26 @@ public class ListViewController {
     
 
     private Main main;
-    private InputClass input;
-    public void getInput(InputClass input){
-    	this.input = input;
-    	input.out.println("IDEN FAGGOT123367");
-    	chatLog.appendText("Hello all");
-    	chatLog.setEditable(false);
-    }
+   
+   
     // Default constructor
     public ListViewController(){}
 
     @FXML private void initialize(){
         // Initialise the person table with the two columns.
-
+    	chatLog.appendText("Hello");
        
         
+    }
+    public void appendChatLog(String msg){
+		
+    	chatLog.appendText(msg);
     }
     public void getUsernames(){
     	//main.listData.add(new List());
     }
     public void handleQuit(){
-    	System.out.println("Quitting app");
+    	main.sendToServer("IDEN fag");
     	System.exit(0);
     }
     
