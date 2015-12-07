@@ -3,8 +3,9 @@ package application;
 	
 import java.io.IOException;
 
-import model.List;
+import model.UserList;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -67,9 +68,8 @@ public class Main extends Application {
 		input.sendMessage(msg);
 	}
 	public void setReply(String msg){
-		//System.out.println(msg);
-		try{
-		controller.appendChatLog("\n"+msg);
+			try{
+			controller.appendChatLog(msg);
 		}catch(Exception e){
 			System.out.println("error");
 		}

@@ -11,17 +11,23 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="255.0">
                <children>
-                  <ListView layoutX="-37.0" layoutY="7.0" prefHeight="498.0" prefWidth="126.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <TableView fx:id="list_table" layoutX="-11.0" layoutY="24.0" prefHeight="498.0" prefWidth="178.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="userName" prefWidth="177.00001537799835" text="C1" />
+                    </columns>
+                  </TableView>
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
                   <TextArea fx:id="chatLog" editable="false" layoutX="1.0" layoutY="5.0" prefHeight="278.0" prefWidth="506.0" AnchorPane.topAnchor="20.0" />
-                  <Button layoutX="12.0" layoutY="309.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="119.0" text="Login" />
-                  <Button layoutX="12.0" layoutY="336.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="119.0" text="Broadcast" />
-                  <Button layoutX="12.0" layoutY="363.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="119.0" text="PM" />
-                  <Button layoutX="12.0" layoutY="390.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="119.0" text="List" />
-                  <Button layoutX="12.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleQuit" prefHeight="27.0" prefWidth="119.0" text="Quit" />
-                  <TextField layoutX="131.0" layoutY="309.0" prefHeight="132.0" prefWidth="378.0" />
+                  <Button fx:id="list" layoutX="12.0" layoutY="390.0" mnemonicParsing="false" onAction="#listAction" prefHeight="27.0" prefWidth="119.0" text="List" />
+                  <Button layoutX="12.0" layoutY="444.0" mnemonicParsing="false" onAction="#handleQuit" prefHeight="27.0" prefWidth="119.0" text="Quit" />
+                  <TextField fx:id="userText" layoutX="131.0" layoutY="309.0" prefHeight="132.0" prefWidth="378.0" />
+                  <Button layoutX="387.0" layoutY="438.0" mnemonicParsing="false" onAction="#onSubmit" prefHeight="27.0" prefWidth="123.0" text="Submit" />
+                  <Button layoutX="12.0" layoutY="417.0" mnemonicParsing="false" onAction="#stat" prefHeight="27.0" prefWidth="119.0" text="Stat" />
+                  <ToggleButton fx:id="broadcast" layoutX="12.0" layoutY="363.0" mnemonicParsing="false" onMouseClicked="#disableOtherButtons" prefHeight="27.0" prefWidth="119.0" text="Broadcast" />
+                  <ToggleButton fx:id="pm" layoutX="12.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#disableOtherButtons" prefHeight="27.0" prefWidth="119.0" text="PM" />
+                  <ToggleButton fx:id="login" layoutX="12.0" layoutY="309.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="119.0" text="Login" />
                </children>
             </AnchorPane>
         </items>
