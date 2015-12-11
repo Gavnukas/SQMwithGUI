@@ -123,7 +123,7 @@ public class ListViewController {
 					List<String> tempList = Arrays.asList(msg.substring(2).split(","));
 					for (String user : tempList) {
 						listData.add(new UserList(user));
-						System.out.println(user);
+						
 					}
 
 			   }else{

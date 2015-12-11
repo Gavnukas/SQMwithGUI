@@ -13,7 +13,7 @@
                <children>
                   <TableView fx:id="list_table" layoutX="-11.0" layoutY="24.0" prefHeight="498.0" prefWidth="178.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn fx:id="userName" prefWidth="177.00001537799835" text="C1" />
+                      <TableColumn fx:id="userName" prefWidth="177.00001537799835" text="Users" />
                     </columns>
                   </TableView>
                </children></AnchorPane>
